@@ -12,4 +12,4 @@ RUN \
     apt-get -f install -y && \
     rm mod-pagespeed-*.deb
 
-RUN apt remove --purge wget -y && apt autoremove -y && apt clean -y
+RUN apt remove --purge wget -y && apt autoremove -y && apt clean
