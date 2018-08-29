@@ -1,4 +1,8 @@
+#version 0.1
+
 FROM julianxhokaxhiu/docker-awesome-wordpress
+MAINTAINER Thibaut SEVERAC
+
 
 #add mod-pagespeed
 RUN \
