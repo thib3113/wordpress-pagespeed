@@ -3,7 +3,7 @@
 FROM julianxhokaxhiu/docker-awesome-wordpress
 MAINTAINER Thibaut SEVERAC
 
-RUN apt install wget
+RUN apt update && apt install wget
 
 #add mod-pagespeed
 RUN \
@@ -12,4 +12,4 @@ RUN \
     apt-get -f install \
     rm mod-pagespeed-*.deb
 
-RUN apt remove --purge wget && apt autoremove -y
+RUN apt remove --purge wget && apt autoremove -y && apt clean 

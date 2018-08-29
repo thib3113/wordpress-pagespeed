@@ -1,2 +1,2 @@
 
-This docker image is based on the beautiful work of [julianxhokaxhiu](https://github.com/julianxhokaxhiu/docker-awesome-wordpress/commits?author=julianxhokaxhiu) : **[docker-awesome-wordpress](https://github.com/julianxhokaxhiu/docker-awesome-wordpress)** with the addition of google pagespeed to optimize loading
+This docker image is based on the beautiful work of [julianxhokaxhiu](https://github.com/julianxhokaxhiu) : **[docker-awesome-wordpress](https://github.com/julianxhokaxhiu/docker-awesome-wordpress)** with the addition of google pagespeed to optimize loading
