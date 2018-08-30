@@ -14,6 +14,10 @@ RUN \
 
 #add SSL
 RUN \
+    apt-get install ssl-cert && \
+    make-ssl-cert generate-default-snakeoil && \
+    usermod --append --groups ssl-cert yyuu && \
+    ls -l /etc/ssl/certs/ssl-cert-snakeoil.pem /etc/ssl/private/ssl-cert-snakeoil.key && \
     a2enmod ssl && \
     a2ensite default-ssl
 
