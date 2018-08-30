@@ -5,6 +5,8 @@ MAINTAINER Thibaut SEVERAC
 
 RUN apt update && apt install wget -y
 
+ENV DEBIAN_FRONTEND noninteractive
+
 #add mod-pagespeed
 RUN \
     wget -q https://dl-ssl.google.com/dl/linux/direct/mod-pagespeed-stable_current_amd64.deb && \
@@ -16,7 +18,7 @@ RUN \
 RUN \
     apt-get install ssl-cert && \
     make-ssl-cert generate-default-snakeoil && \
-    usermod --append --groups ssl-cert yyuu && \
+    usermod --append --groups ssl-cert www-data && \
     ls -l /etc/ssl/certs/ssl-cert-snakeoil.pem /etc/ssl/private/ssl-cert-snakeoil.key && \
     a2enmod ssl && \
     a2ensite default-ssl
