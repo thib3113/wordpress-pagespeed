@@ -12,6 +12,13 @@ RUN \
     apt-get -f install -y && \
     rm mod-pagespeed-*.deb
 
+#add SSL
+RUN \
+    a2enmod ssl && \
+    a2ensite default-ssl
+
 RUN apt remove --purge -y wget && \
     apt-get autoremove -y && \
     apt-get clean
+
+EXPOSE 80 443
