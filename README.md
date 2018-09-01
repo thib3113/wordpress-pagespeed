@@ -1,5 +1,5 @@
 
-  ## # thib3113/wordpress-pagespeed
+  ### thib3113/wordpress-pagespeed
 This docker image is based on the beautiful work of [julianxhokaxhiu](https://github.com/julianxhokaxhiu) : **[docker-awesome-wordpress](https://github.com/julianxhokaxhiu/docker-awesome-wordpress)** 
 
 With additions :
