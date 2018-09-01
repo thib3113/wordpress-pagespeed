@@ -27,6 +27,8 @@ RUN { \
     echo "sendmail_path = /usr/sbin/sendmail -t -i"; \
   } > /usr/local/etc/php/conf.d/mail.ini
 
+RUN update-rc.d sendmail defaults
+
 
 RUN apt remove --purge -y wget && \
     apt-get autoremove -y && \
