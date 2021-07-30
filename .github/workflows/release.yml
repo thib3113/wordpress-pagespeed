@@ -59,3 +59,9 @@ jobs:
       -
         name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
+      -
+        name: dive check image
+        run: |
+          docker run --rm -it \
+          -v /var/run/docker.sock:/var/run/docker.sock \
+          wagoodman/dive:latest ghcr.io/${{ github.event.repository.full_name }}
