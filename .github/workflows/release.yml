@@ -62,6 +62,11 @@ jobs:
       -
         name: dive check image
         run: |
-          docker run --rm -it \
+          docker run --rm \
+          -v /usr/local/bin/docker:/bin/docker \
           -v /var/run/docker.sock:/var/run/docker.sock \
+          -v  "$(pwd)":"$(pwd)" \
+          -w "$(pwd)" \
+          -e "CI=true" \
           wagoodman/dive:latest ghcr.io/${{ github.event.repository.full_name }}
+
