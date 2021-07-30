@@ -40,7 +40,7 @@ RUN wget https://github.com/php/pecl-text-wddx/archive/master.zip -O wddx.zip \
 
 # install the PHP extensions we need
 RUN docker-php-ext-configure gd --with-freetype --with-jpeg \
-  && docker-php-ext-configure ldap --with-libdir=lib/x86_64-linux-gnu/ \
+  && docker-php-ext-configure ldap --with-libdir=lib/$(gcc --dumpmachine)/ \
   && docker-php-ext-install gd json mysqli pdo pdo_mysql opcache gettext exif calendar soap sockets ldap zip
 
 # Download WordPress CLI
