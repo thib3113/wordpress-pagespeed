@@ -12,7 +12,7 @@ RUN a2enmod rewrite \
   && a2enmod authnz_ldap
 
 # Disable Certification validation for LDAP ( may be required if LDAPS is behind a custom self-signed certificate )
-RUN echo -e "\nTLS_REQCERT never\n" >> /etc/ldap/ldap.conf
+#RUN echo -e "\nTLS_REQCERT never\n" >> /etc/ldap/ldap.conf
 
 # Install required dependencies
 RUN apt-get update \
