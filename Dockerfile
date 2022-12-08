@@ -1,5 +1,5 @@
-#version 7.4
-FROM php:7.4-apache
+#version 8.2
+FROM php:8.2-apache
 
 MAINTAINER Thibaut SEVERAC
 
